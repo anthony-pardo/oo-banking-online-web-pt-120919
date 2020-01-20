@@ -18,7 +18,7 @@ class Transfer
   
   def execute_transaction
     if self.sender.balance < @amount 
-      return "Sorry not enough funds."
+      return "Transaction rejected. Please check your account balance."
     elsif !valid? 
       @status = "rejected"
       return "Transaction rejected. Please check your account balance."
