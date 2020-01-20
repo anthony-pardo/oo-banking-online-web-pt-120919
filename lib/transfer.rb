@@ -7,4 +7,8 @@ class Transfer
     @status = 'pending'
     @amount = amt 
   end
+  
+  def valid? 
+    if @sender.
+  end
 end
