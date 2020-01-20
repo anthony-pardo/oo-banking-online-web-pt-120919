@@ -17,13 +17,13 @@ class Transfer
   end
   
   def execute_transaction
-    if @sender.balance < @amount 
+    if self.sender.balance < @amount 
       return "Sorry not enough funds."
     elsif !valid? 
       return "Sorry not valid"
     else 
-      @reciever.balance += @amount 
-      @sender.balance -= @amount 
+      self.receiver.balance += @amount 
+      self.sender.balance -= @amount 
     end
   end
 end
