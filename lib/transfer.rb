@@ -21,6 +21,7 @@ class Transfer
       return "Sorry not enough funds."
     elsif !valid? 
       return "Sorry not valid"
+    elsif @status == "complete"
     else 
       self.receiver.balance += @amount 
       self.sender.balance -= @amount 
