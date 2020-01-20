@@ -20,7 +20,7 @@ class Transfer
     if self.sender.balance < @amount 
       return "Sorry not enough funds."
     elsif !valid? 
-      @status == "rejected"
+      @status = "rejected"
       return "Transaction rejected. Please check your account balance."
     elsif @status == "complete"
     else 
